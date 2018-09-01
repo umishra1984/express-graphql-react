@@ -2,7 +2,7 @@
   "name": "server",
   "version": "1.0.0",
 "engines": {
-    "npm": "6.3.0",
+    "npm": "6.2.0",
     "node": "10.9.0"
   },
   "description": "",
