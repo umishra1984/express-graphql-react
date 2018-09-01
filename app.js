@@ -14,7 +14,9 @@ app.use(cors());
 // connect to mlab database
 // make sure to replace my db string & creds with your own
 mongoose.connect(
-  `mongodb://utkarsh:utkarsh123@ds141641.mlab.com:41641/gql-playlistapp`
+  `mongodb://${process.env.DB_USER}:${process.env.DB_PASSWORD}@${
+    process.env.DB_HOST
+  }`
 );
 mongoose.connection.once("open", () => {
   console.log("conneted to database");
