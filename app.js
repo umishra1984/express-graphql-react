@@ -31,10 +31,8 @@ app.use(cors());
 //   })
 // );
 
-var router = express.Router();
-
 // Home page route.
-router.get("/", function(req, res) {
+app.route.get("/", function(req, res) {
   res.send("Wiki home page");
 });
 
