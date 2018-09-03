@@ -31,10 +31,14 @@ app.use(cors());
 //   })
 // );
 
+var router = express.Router();
+
 // Home page route.
-app.route.get("/", function(req, res) {
+router.get("/", function(req, res) {
   res.send("Wiki home page");
 });
+
+app.use("/", router);
 
 app.listen(8080, () => {
   console.log("now listening for requests on port 8080");
