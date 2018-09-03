@@ -5,6 +5,8 @@ const schema = require("./schema/schema");
 const mongoose = require("mongoose");
 const cors = require("cors");
 
+const PORT = process.env.PORT || 5000;
+
 const app = express();
 
 // allow cross-origin requests
@@ -40,6 +42,6 @@ router.get("/", function(req, res) {
 
 app.use("/", router);
 
-app.listen(8080, () => {
-  console.log("now listening for requests on port 8080");
+app.listen(PORT, () => {
+  console.log(`now listening for requests on port ${PORT}`);
 });
